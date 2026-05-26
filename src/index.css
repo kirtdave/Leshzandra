@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@400;500&family=Poppins:wght@400;500;700&display=swap");
+@import "tailwindcss";
+
+* {
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.Headernav {
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.Headernav:hover {
+  transform: translateY(-3px);
+}
+
+.Headernav::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: #e07b39;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+
+.Headernav:hover::before {
+  transform: scaleY(1);
+}
+
+.direction-element {
+  transition:
+    transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    box-shadow 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.direction-element:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.visit-element {
+  transition: all 0.3s ease;
+}
+
+.visit-element:hover {
+  transform: translateY(10px) scale(0.999999999999999);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.card-element {
+  transition: all 0.3s ease;
+}
+
+.card-element:hover {
+  filter: brightness(0.7);
+}
